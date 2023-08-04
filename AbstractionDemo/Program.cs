@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trainining
+namespace AbstractionDemo
 {
     //interface of 1 : A
     public interface Wholeseller
