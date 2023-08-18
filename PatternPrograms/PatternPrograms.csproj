@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A312CDE1-2CE0-417E-8547-A74CC57B0AB4}</ProjectGuid>
+    <ProjectGuid>{88DEA32B-3203-43DA-8663-3E936B72DE24}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Delegate</RootNamespace>
-    <AssemblyName>Delegate</AssemblyName>
+    <RootNamespace>PatternPrograms</RootNamespace>
+    <AssemblyName>PatternPrograms</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WhyDelegate.cs" />
-    <Compile Include="DatatypeChange.cs" />
+    <Compile Include="Armstrong.cs" />
+    <Compile Include="SumOfDigit.cs" />
+    <Compile Include="Swapping.cs" />
+    <Compile Include="factorial.cs" />
+    <Compile Include="Palidrome.cs" />
+    <Compile Include="PrimeNumber.cs" />
+    <Compile Include="Fibonacci.cs" />
+    <Compile Include="PatternDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

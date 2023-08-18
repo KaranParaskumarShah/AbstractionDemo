@@ -31,6 +31,13 @@ namespace AbstractionDemo
             Demo2 objnull = new Demo2();
             objnull.nullableCollision();
 
+            ListDemo objList = new ListDemo();
+            objList.listMethod();
+
+            ArrayDemo objArray = new ArrayDemo();
+            objArray.ArrayMethod();
+            objArray.ArrayMethod2();
+
             
 
 
