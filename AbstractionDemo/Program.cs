@@ -4,8 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Trainining
+namespace AbstractionDemo
 {
+
+    //Main class of project
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Store objSelect = new Store();
+            objSelect.towel();
+            objSelect.bedsheets();
+            objSelect.curtains();
+            objSelect.doormates();
+
+            Store objSelect2 = new Store(32, "hello", 777.6789D);
+
+
+
+            WorkerChild objWoker = new WorkerChild();
+            objWoker.memberIncome();
+            objWoker.name();
+            objWoker.member();
+
+
+            Demo2 objnull = new Demo2();
+            objnull.nullableCollision();
+
+            
+
+
+            Console.ReadKey();
+
+            //List class method 
+
+
+
+
+        }
+    }
+
+
+
+
     //interface of 1 : A
     public interface Wholeseller
     {
@@ -182,27 +223,5 @@ namespace Trainining
 
 
 
-    //Main class of project
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Store objSelect = new Store();
-            objSelect.towel();
-            objSelect.bedsheets();
-            objSelect.curtains();
-            objSelect.doormates();
-
-            Store objSelect2 = new Store(32, "hello", 777.6789D);
-
-
-
-            WorkerChild objWoker = new WorkerChild();
-            objWoker.memberIncome();
-            objWoker.name();
-            objWoker.member();
-
-            Console.ReadKey();
-        }
-    }
+     
 }
