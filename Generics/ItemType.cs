@@ -6,20 +6,15 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-   public  class ItemType<T>: Category<T>
+   public interface ItemType<T,V>: Category<T,V>
     {
-        public T ItemId
-        {
-            get;
-            set;
-        }
-        public string ItemName
+         string ItemName
         {
             get;
             set;
         }
 
-        public string ItemPrice
+         int ItemPrice
         {
             get;
             set;
@@ -28,19 +23,14 @@ namespace Generics
 
     }
 
-    public class Category<T>
+    public interface Category<T,V>:Base<T,V>
     {
-        public T CategoryId
+           string CategoryName
         {
             get;
             set;
         }
-
-        public string CategoryName
-        {
-            get;
-            set;
-        }
+        
 
     }
 }

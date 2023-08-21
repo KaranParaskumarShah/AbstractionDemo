@@ -5,21 +5,52 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Generics
-{   
+{
+    
+     public interface Base<T,V>
+    {
+         T Id
+        {
+            get;
+            set;
+        }
+
+         V CreatedOn
+        {
+            get;
+            set;
+        }
+
+    }
+
     public class Program
     {
         public static void Main(string[] args)
         {
-            Client<int> objCli = new Client<int>();
-            objCli.ClientId = 12;
+            Bill<int, DateTime> objCli = new Bill<int, DateTime>();
+            objCli.Id = 12;
             objCli.ClientName = "aman";
             objCli.ClientNumber = "7990213036";
             objCli.ClientEmail = "aman@1234";
             objCli.ClientPassword = "aman11";
-            objCli.ClientGenderId = 2;
-            objCli.ClientDOB = '2001-02-11 ';
+            objCli.GenderId = 1;
 
-            Console.WriteLine(objCli.ClientId);
+            objCli.ItemName = "Single bed with Cover";
+            objCli.ItemPrice = 450;
+            objCli.ItemQuantity = 3;
+            objCli.Operation = 1;
+            objCli.OperationName = "Insert";
+            int total = objCli.ItemPrice * objCli.ItemQuantity;
+
+            Console.WriteLine(objCli.ItemName);
+            Console.WriteLine(objCli.ItemPrice);
+            Console.WriteLine(objCli.ItemQuantity);
+            Console.WriteLine(objCli.Operation);
+            Console.WriteLine(objCli.OperationName);
+            Console.WriteLine("Value of bill : {0}", total);
+
+
+            Console.WriteLine(objCli.Id);
             Console.WriteLine(objCli.ClientName);
             Console.WriteLine(objCli.ClientNumber);
 
@@ -27,7 +58,7 @@ namespace Generics
 
             Console.WriteLine(objCli.ClientPassword);
 
-            Console.WriteLine(objCli.ClientGenderId);
+            Console.WriteLine(objCli.GenderId);
             Console.WriteLine(objCli.ClientDOB);
 
 
@@ -38,32 +69,28 @@ namespace Generics
             Console.ReadKey();
         }
     }
-    public class Client<T>:ClientGender<T>,OperationType<T>
+    public interface Client<T,V>: Base<T, V>,ClientGender<T>,OperationType<T>
+
     {
-        public T ClientId
-        {
-            get;
-            set;
-        }
-        public string ClientName
+         string ClientName
         {
             get;
             set;
         }
 
-        public string ClientNumber
+         string ClientNumber
         {
             get;
             set;
         }
 
-        public string ClientEmail
+        string ClientEmail
         {
             get;
             set;
         }
 
-        public string ClientPassword
+         string ClientPassword
         {
             get;
             set;
@@ -71,30 +98,26 @@ namespace Generics
 
       
 
-        public DateTime ClientDOB
+         DateTime ClientDOB
         {
             get;
             set;
         }
 
      
-        public T Operation 
-        {
-            get;
-            set;
-         }
-        public string OperationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        
+
     }
 
-    public class ClientGender<T>
+    public interface ClientGender<T>
     {
-        public T ClientGenderId
+         T GenderId
         {
             get;
             set;
         }
 
-        public string ClientGenderName
+         string ClientGenderName
         {
             get;
             set;

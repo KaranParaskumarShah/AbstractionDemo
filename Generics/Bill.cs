@@ -6,12 +6,40 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    public class Bill<T>:ItemType<T>,
+    public class Bill<T, V> : Base<T, V>, Client<T, V>, ItemType<T, V>, Category<T, V>
     {
         public T BillId
         {
             get;
             set;
         }
+        public string ClientName { get; set; }
+        public string ClientNumber { get; set; }
+        public string ClientEmail { get; set; }
+        public string ClientPassword { get; set; }
+
+        public DateTime ClientDOB { get; set; }
+
+        public T GenderId { get; set; }
+
+        public T Id { get; set; }
+
+        public V CreatedOn { get; set; }
+
+        public string ClientGenderName { get; set; }
+
+
+        public T Operation { get; set; }
+
+
+        public string OperationName { get; set; }
+
+        public string ItemName { get; set; }
+
+        public int ItemPrice { get; set; }
+
+        public string CategoryName { get; set; }
+
+        public int ItemQuantity { get; set; }
     }
 }
