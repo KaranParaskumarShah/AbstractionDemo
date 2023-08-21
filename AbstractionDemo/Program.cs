@@ -230,5 +230,32 @@ namespace AbstractionDemo
 
 
 
+<<<<<<< HEAD
      
 }
+=======
+    //Main class of project
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Store objSelect = new Store();
+            objSelect.towel();
+            objSelect.bedsheets();
+            objSelect.curtains();
+            objSelect.doormates();
+
+            Store objSelect2 = new Store(32, "hello", 777.6789D);
+
+
+
+            WorkerChild objWoker = new WorkerChild();
+            objWoker.memberIncome();
+            objWoker.name();
+            objWoker.member();
+
+            Console.ReadKey();
+        }
+    }
+}
+>>>>>>> 48fddaea816fd5d658cf32b8ab87210e2920ab0a
