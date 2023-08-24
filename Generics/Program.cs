@@ -111,6 +111,26 @@ namespace Generics
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+
+
+            string qu = "Select * from ClientInfo";
+            SqlCommand sqc = new SqlCommand(qu, con);
+            con.Open();
+            SqlDataReader red=sqc.ExecuteReader();
+            if (red.HasRows)
+            {
+                while (red.Read())
+                {
+                    Console.WriteLine("{0}     {1}    {2}    {3}   {4}   {5}    {6}   {7}", red["ClientId"],
+                        red["ClientName"],red["ClientNumber"],red["ClientEmail"],red["ClientPassword"]
+                        ,red["ClientGenderId"],red["ClientDOB"],red["OperationId"]);
+                }
+            }
+
+
+
+
+
         }
 
         public void InsertStoreProGender()
