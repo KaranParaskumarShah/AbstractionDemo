@@ -13,7 +13,7 @@ namespace PatternPrograms
             //PatternDemo objPattern = new PatternDemo();
             //objPattern.PatternDemo1();
             //objPattern.PatternDemo2();
-            int sum = 0;
+            //int sum = 0;
 
             Console.WriteLine("Enter Numbers");
             int num = Convert.ToInt32(Console.ReadLine());

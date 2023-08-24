@@ -20,6 +20,11 @@ namespace Generics
             set;
         }
 
+        T CategoryId
+        {
+            get;set;
+        }
+
 
     }
 
@@ -29,6 +34,10 @@ namespace Generics
         {
             get;
             set;
+        }
+        int TotalCategoryQuantity
+        {
+            get;set;
         }
         
 

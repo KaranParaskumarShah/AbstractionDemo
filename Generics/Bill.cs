@@ -8,11 +8,7 @@ namespace Generics
 {
     public class Bill<T, V> : Base<T, V>, Client<T, V>, ItemType<T, V>, Category<T, V>
     {
-        public T BillId
-        {
-            get;
-            set;
-        }
+       public T ItemId { get; set; }
         public string ClientName { get; set; }
         public string ClientNumber { get; set; }
         public string ClientEmail { get; set; }
@@ -41,5 +37,18 @@ namespace Generics
         public string CategoryName { get; set; }
 
         public int ItemQuantity { get; set; }
+        
+        public T PaymentId { get; set; }
+        public string PaymentTypeName { get; set; }
+        public T CategoryId { get; set; }
+        
+        public T ClientId { get; set; }
+
+        public int TotalBill { get; set; }
+
+        public int TotalCategoryQuantity
+        {
+            get;set;
+        }
     }
 }
